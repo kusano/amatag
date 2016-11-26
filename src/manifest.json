@@ -1,6 +1,7 @@
 {
+  "manifest_version": 2,
   "name": "AmaTag - Amazon Associate Tag Checker",
-  "version": "0.0.0.2",
+  "version": "0.0.0.3",
   "description": "現在有効なAmazonアソシエイト（アフィリエイト）のタグ（トラッキングID）を表示します。表示されたタグの所有者にアフィリエイト報酬が支払われます。たぶん。",
   "icons": {
     "48": "icon48.png",
@@ -11,8 +12,11 @@
     "popup": "popup.html"
   },
   "content_scripts": [{
-    "matches": ["http://www.amazon.co.jp/*"],
+    "matches": ["*://www.amazon.co.jp/*"],
     "js": ["content.js"]
   }],
-  "background_page": "background.html"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }

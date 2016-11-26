@@ -1,4 +1,4 @@
-chrome.extension.onRequest.addListener(
+chrome.runtime.onMessage.addListener(
 	function( request, sender, sendResponse )
 	{
 		var tag = request.tag;
